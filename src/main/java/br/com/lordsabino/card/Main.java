@@ -24,7 +24,7 @@ public class Main {
                 "The ultimate wizard in terms of attack and defense."
         );
 
-        Card sevenToolsOfTheBandit = new MagicAndTrap(
+        /*Card sevenToolsOfTheBandit = new MagicAndTrap(
               "Seven Tools of the Bandit",
               "Trap",
               "Counter",
@@ -32,7 +32,7 @@ public class Main {
               "Activation requirement, Cost, Effect",
               "Unlimited",
               "When a Trap Card is activated: Pay 1000 LP; negate the activation, and if you do, destroy it."
-        );
+        );*/
 
         Card doubleSpell = MagicAndTrap.createMagicAndTrapCards(
                 "Double Spell",
@@ -64,7 +64,7 @@ public class Main {
                 "When a Spell Card is activated: Discard 1 card; negate the activation, and if you do, destroy it"
         );
 
-        List<Card> cards = Arrays.asList(darkMagician, sevenToolsOfTheBandit, doubleSpell, potOfGreed, magicJammer);
+        List<Card> cards = Arrays.asList(darkMagician, doubleSpell, potOfGreed, magicJammer);
 
         cards.forEach(System.out::println);
     }

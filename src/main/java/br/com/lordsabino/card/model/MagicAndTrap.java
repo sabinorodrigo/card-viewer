@@ -22,7 +22,7 @@ public class MagicAndTrap extends Card {
 
     public MagicAndTrap() {}
 
-    public MagicAndTrap(String name, String cardType, String property, String passcode, String cardEffectTypes, String statuses, String cardDescriptions) {
+    private MagicAndTrap(String name, String cardType, String property, String passcode, String cardEffectTypes, String statuses, String cardDescriptions) {
         this.name = name;
         this.cardType = cardType;
         this.property = property;

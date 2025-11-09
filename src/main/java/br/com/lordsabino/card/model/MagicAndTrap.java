@@ -1,5 +1,7 @@
 package br.com.lordsabino.card.model;
 
+import java.util.Objects;
+
 public class MagicAndTrap extends Card {
 
     private Long id;
@@ -28,6 +30,14 @@ public class MagicAndTrap extends Card {
         this.cardEffectTypes = cardEffectTypes;
         this.statuses = statuses;
         this.cardDescriptions = cardDescriptions;
+    }
+
+    public static MagicAndTrap createMagicAndTrapCards(
+            String name, String cardType, String property,
+            String passcode, String cardEffectTypes, String statuses,
+            String cardDescriptions
+    ) {
+        return new MagicAndTrap(name, cardType, property, passcode, cardEffectTypes, statuses, cardDescriptions);
     }
 
     @Override
@@ -105,5 +115,17 @@ public class MagicAndTrap extends Card {
 
     public void setCardDescriptions(String cardDescriptions) {
         this.cardDescriptions = cardDescriptions;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        MagicAndTrap that = (MagicAndTrap) o;
+        return Objects.equals(id, that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 }
